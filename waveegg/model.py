@@ -11,7 +11,7 @@ class WaveNet_a2e(nn.Module):
         self.receptive_field_size = 1
         self.dilated_convs = nn.ModuleList()
         self.batch_norms = nn.ModuleList()
-        self.dropouts = nn.ModuleList()     
+        self.dropouts = nn.ModuleList()
         self.attentions = nn.ModuleList()
         self.residual_convs = nn.ModuleList()
 
@@ -29,7 +29,7 @@ class WaveNet_a2e(nn.Module):
             self.receptive_field_size += dilation * 2
             self.batch_norms.append(nn.BatchNorm1d(2 * dilation_channels))
             # self.layer_norms.append(nn.LayerNorm(2 * dilation_channels))
-            self.dropouts.append(nn.Dropout(p=dropout)) 
+            self.dropouts.append(nn.Dropout(p=dropout))
             self.attentions.append(SelfAttention(dilation_channels))
             self.residual_convs.append(nn.Conv1d(dilation_channels, dilation_channels, kernel_size=1))
 
@@ -80,5 +80,3 @@ class SelfAttention(nn.Module):
         context = torch.bmm(value, attn)
 
         return context.view(batch, channels, width) + x
-
-
