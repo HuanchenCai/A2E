@@ -1,0 +1,18 @@
+{
+  "name": "Trial22 archival checkpoint",
+  "architecture": {"input_channels": 1, "dilation_channels": 128, "dilation_layers": 7, "dropout": 0.3},
+  "sample_rate": 16000,
+  "frame_length": 192,
+  "inference_hop": 32,
+  "normalization": "none",
+  "audio_highpass_hz": 30,
+  "audio_highpass_order": 2,
+  "postfilter": true,
+  "egg_highpass_hz": 80,
+  "egg_lowpass_hz": 4000,
+  "egg_fir_taps": 1025,
+  "window": "symmetric_hann",
+  "checkpoint_sha256": "de88b1c9787278f7463877dc282403b62f08defdf5ac610f274a944bf1129b96",
+  "source_main_commit": "cff32b34558457516289af63b50952ec974a2842",
+  "provenance": "Weights from Trial22_stride4_length12ms_dl7_lr0.001_gamma0.95_ALL; frontend follows the archived February 2025 test notebook. Final paper result provenance is not yet confirmed."
+}
