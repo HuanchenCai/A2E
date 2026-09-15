@@ -1,0 +1,8 @@
+# Tested Windows CPU environment (Python 3.12.10).
+# Install the CPU wheels first with the official index if needed.
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch==2.14.0+cpu
+torchaudio==2.11.0+cpu
+scipy==1.18.1
+numpy==2.5.3
+pytest==9.1.1
